@@ -15,6 +15,13 @@
 
 
     */
+    body {
+        background: aqua;
+        font-family: 'Open Sans', sans-serif;
+        color: bisque;
+    }
+
+
     #div-col{
         background-color: blue;
         padding-top: 50%;
