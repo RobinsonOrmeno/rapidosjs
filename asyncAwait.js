@@ -38,4 +38,4 @@ const getNombreAsync = async(idPost)=>{
     }
 }
 
-getNombreAsync(18)
+//getNombreAsync(18)

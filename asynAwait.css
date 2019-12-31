@@ -1,0 +1,46 @@
+
+
+body{
+    background:darkturquoise;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+
+    grid-template-areas: "ides usuarios";
+
+}
+
+.container > div ,
+.container .ides,
+.container .user {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.ides{
+    grid-area: ides;
+}
+
+.usuarios{
+    grid-area: usuarios;
+}
+
+
+
+@media screen and ( max-width: 780px){
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios";
+                             
+    }
+
+}
