@@ -14,13 +14,15 @@ body{
     grid-gap: 20px;
     grid-template-columns: repeat(2,1fr);
 
-    grid-template-areas: "ides usuarios";
+    grid-template-areas: "ides usuarios"
+                        "tabla tabla";
 
 }
 
 .container > div ,
 .container .ides,
-.container .user {
+.container .user
+.container .tabla {
     background: #fff;
     padding: 20px;
     border-radius: 4px;
@@ -33,14 +35,28 @@ body{
 .usuarios{
     grid-area: usuarios;
 }
+.tabla{
+    grid-area: tabla; 
+}
 
 
 
 @media screen and ( max-width: 780px){
     .container{
         grid-template-areas: "ides ides"
-                             "usuarios usuarios";
+                             "usuarios usuarios"
+                             "tabla tabla";
                              
     }
 
 }
+
+.my-custom-scrollbar {
+    
+    height: 150px;
+    overflow: auto;
+    }
+    .table-wrapper-scroll-y {
+    display: grid;
+    }
+
