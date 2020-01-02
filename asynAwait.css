@@ -63,6 +63,11 @@ body{
                              
     }
 
+    .tabla  {
+        margin: 5%;
+        
+    }
+
 }
 
 .my-custom-scrollbar {
