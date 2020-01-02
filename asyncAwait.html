@@ -45,58 +45,7 @@
 
     <div class="tabla">
             <h2> Tabla</h2>
-        <div class="tablauno table-wrapper-scroll-y my-custom-scrollbar">
 
-                <table class="table table-bordered table-striped mb-0">
-                    <thead>
-                    <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">First</th>
-                        <th scope="col">Last</th>
-                        <th scope="col">Handle</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">4</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">5</th>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">6</th>
-                        <td>Larry</td>
-                        <td>the Bird</td>
-                        <td>@twitter</td>
-                    </tr>
-                    </tbody>
-                </table>
-
-    </div>
 
     <div id="tablados">
         <table id="tablausuarios" class="table">
@@ -104,52 +53,70 @@
                 <tr>
                     <th>ID</th>
                     <th>NOMBRE</th>
-                    <th>DESC</th>
-                    <th>FECHA</th>
+                    <th>NOMBRE USUARIO</th>
+                    <th>CIUDAD</th>
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>002</td>
-                    <td>Adas</td>
-                    <td>asfsdfsfadssdfasd</td>
-                    <td>01/01/2020</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Adas</td>
-                    <td>asfsdfsfadssdfasd</td>
-                    <td>01/01/2020</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Adas</td>
-                    <td>asfsdfsfadssdfasd</td>
-                    <td>01/01/2020</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Adas</td>
-                    <td>asfsdfsfadssdfasd</td>
-                    <td>01/01/2020</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Adas</td>
-                    <td>asfsdfsfadssdfasd</td>
-                    <td>01/01/2020</td>
-                </tr>
-                <tr>
-                    <td>002</td>
-                    <td>Adas</td>
-                    <td>asfsdfsfadssdfasd</td>
-                    <td>01/01/2020</td>
-                </tr>
+               
             </tbody>
         </table>
 
 
     </div>
+
+    <div class="tablauno table-wrapper-scroll-y my-custom-scrollbar">
+
+        <table class="table table-bordered table-striped mb-0">
+            <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">3</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            <tr>
+                <th scope="row">4</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+            </tr>
+            <tr>
+                <th scope="row">5</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+            </tr>
+            <tr>
+                <th scope="row">6</th>
+                <td>Larry</td>
+                <td>the Bird</td>
+                <td>@twitter</td>
+            </tr>
+            </tbody>
+        </table>
+
+</div>
 
 
  </div></div>
@@ -175,10 +142,13 @@
 
     $('#boton-consultar').on('click',function(){
         let id = $('#id-consulta').val();
+        let cont = 1;
+      
        
-      let res =  getNombre(id)
-        
+      let res =  getNombreAsync(id)
 
+
+      
            
      
     });

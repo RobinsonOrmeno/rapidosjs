@@ -28,12 +28,20 @@ const getNombreAsync = async(idPost)=>{
         const resPost = await fetch(`https://jsonplaceholder.typicode.com/posts/${idPost}`)
 
         const post = await resPost.json()
-        console.log(post)
-
+   //     console.log(post)
         const resUser = await  fetch(`https://jsonplaceholder.typicode.com/users/${post.id}`)
         const user = await resUser.json()
-        console.log(user.name)
+       // console.log(user)
         $('#nombre').text(user.name)
+
+        let t = $('#tablausuarios').DataTable();
+         t.row.add([
+            user.id,
+            user.name,
+            user.username,
+            user['address'].city
+      ]).draw()
+
     } catch (error) {
         console.log(error)
     }
