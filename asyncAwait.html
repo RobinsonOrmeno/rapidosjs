@@ -142,15 +142,21 @@
 
     $('#boton-consultar').on('click',function(){
         let id = $('#id-consulta').val();
-        let cont = 1;
-      
-       
-      let res =  getNombreAsync(id)
-
-
-      
-           
-     
+        let res = getNombreAsync(id).then(function(resolve){
+            $('#nombre').text(resolve.name)
+            let t = $('#tablausuarios').DataTable();
+            t.row.add([
+            resolve.id,
+            resolve.name,
+            resolve.username,
+            resolve['address'].city
+            ]).draw()
+        })
+        
+        firstAsync().then(
+            function(resolve){
+            console.log(resolve)
+        })
     });
 </script>
 </html>

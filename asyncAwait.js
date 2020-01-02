@@ -32,20 +32,32 @@ const getNombreAsync = async(idPost)=>{
         const resUser = await  fetch(`https://jsonplaceholder.typicode.com/users/${post.id}`)
         const user = await resUser.json()
        // console.log(user)
-        $('#nombre').text(user.name)
-
-        let t = $('#tablausuarios').DataTable();
-         t.row.add([
-            user.id,
-            user.name,
-            user.username,
-            user['address'].city
-      ]).draw()
-
+    
+        return user
+    
     } catch (error) {
         console.log(error)
+
+        alert(error, "", "error")
+
     }
+
+   
 }
 
 //getNombreAsync(18)
 
+
+const firstAsync = async()=>{
+    let promise = new Promise((res, rej) => {
+        setTimeout(() => res("Now it's done!"), 1000)
+    });
+
+    // wait until the promise returns us a value
+    let result = await promise; 
+  
+    // "Now it's done!"
+    return result
+ 
+    }
+    
