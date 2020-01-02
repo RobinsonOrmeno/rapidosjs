@@ -1,9 +1,9 @@
 
 
 body{
-    background:darkturquoise;
-    color: #000;
-    font-family: 'Roboto', sans-serif;
+    background:darkturquoise !important;
+    color: #000 !important;
+    font-family: 'Roboto', sans-serif !important;
 }
 
 .container{
