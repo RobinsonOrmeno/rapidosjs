@@ -11,6 +11,7 @@ const getNombre = (idPost) =>{
                     return res.json()
                 })
                     .then(user =>{
+                        $('#nombre').text(user.name)
                         console.log(user.name)
                     })
         })
@@ -29,10 +30,10 @@ const getNombreAsync = async(idPost)=>{
         const post = await resPost.json()
         console.log(post)
 
-        const resUser = await  fetch(`https://jsonplaceholder.typicode.com/users/${post.userId}`)
+        const resUser = await  fetch(`https://jsonplaceholder.typicode.com/users/${post.id}`)
         const user = await resUser.json()
         console.log(user.name)
-      
+        $('#nombre').text(user.name)
     } catch (error) {
         console.log(error)
     }

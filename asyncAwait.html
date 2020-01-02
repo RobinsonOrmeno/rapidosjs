@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" type="text/css" href="asynAwait.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
     <script src="asyncAwait.js"></script>
 </head>
 <body>
@@ -13,10 +18,22 @@
     <div class="container">
         
         <div class="ides">
-            <label id="id-user">ID-S</label>
+            <h2 id="id-user">ID-S</h2>
+            <div class="formulario">
+                <div class="form-group">
+                    <label for="id-consulta">ID CONSULTA</label>
+                    <input type="text" class="form-control" id="id-consulta" placeholder="Enter id">
+                
+                  </div>
+                  <button id="boton-consultar" class="btn btn-primary">Consultar</button>
+
+            </div>
         </div>
         <div class="usuarios">
-            <label id="user">USUARIOS</label>
+            <h2 id="user">USUARIOS</h2>
+            <div class="resultado">
+                <label id="nombre">nombre</label>
+            </div>
         </div>
 
     </div>
@@ -26,4 +43,15 @@
 
 
 </body>
+<script>
+    $('#boton-consultar').on('click',function(){
+        let id = $('#id-consulta').val();
+       
+      let res =  getNombreAsync(id)
+        
+
+           
+     
+    });
+</script>
 </html>
