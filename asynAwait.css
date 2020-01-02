@@ -37,6 +37,20 @@ body{
 }
 .tabla{
     grid-area: tabla; 
+    
+}
+
+.container .tabla{
+
+    background: deepskyblue;
+}
+.tabla > div ,
+.tabla .tablauno,
+.tabla .tablados {
+    margin: 5%;
+    background: #fff;
+  
+    border-radius: 4px;
 }
 
 

@@ -11,6 +11,11 @@
     src="https://code.jquery.com/jquery-3.4.1.js"
     integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
+  
+    <script src="http://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="http://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" >
+ 
+    
     <script src="asyncAwait.js"></script>
 </head>
 <body>
@@ -40,63 +45,115 @@
 
     <div class="tabla">
             <h2> Tabla</h2>
-        <div class="table-wrapper-scroll-y my-custom-scrollbar">
+        <div class="tablauno table-wrapper-scroll-y my-custom-scrollbar">
 
-  <table class="table table-bordered table-striped mb-0">
-    <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      <tr>
-        <th scope="row">4</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">5</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">6</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
+                <table class="table table-bordered table-striped mb-0">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                    </tr>
+                    </tbody>
+                </table>
 
+    </div>
+
+    <div id="tablados">
+        <table id="tablausuarios" class="table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NOMBRE</th>
+                    <th>DESC</th>
+                    <th>FECHA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>002</td>
+                    <td>Adas</td>
+                    <td>asfsdfsfadssdfasd</td>
+                    <td>01/01/2020</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Adas</td>
+                    <td>asfsdfsfadssdfasd</td>
+                    <td>01/01/2020</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Adas</td>
+                    <td>asfsdfsfadssdfasd</td>
+                    <td>01/01/2020</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Adas</td>
+                    <td>asfsdfsfadssdfasd</td>
+                    <td>01/01/2020</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Adas</td>
+                    <td>asfsdfsfadssdfasd</td>
+                    <td>01/01/2020</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>Adas</td>
+                    <td>asfsdfsfadssdfasd</td>
+                    <td>01/01/2020</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+
+
+ </div></div>
 </div>
-
-
-    </div>
-
-    </div>
 
 
 
@@ -104,6 +161,18 @@
 
 </body>
 <script>
+    $(document).ready(function(){
+        $('#tablausuarios').DataTable({
+            "scrollY":"130px",
+            "scrollCollapse": true,
+            "paging": false,
+            "searching": false,
+            "info": false
+        });
+    })
+
+
+
     $('#boton-consultar').on('click',function(){
         let id = $('#id-consulta').val();
        
