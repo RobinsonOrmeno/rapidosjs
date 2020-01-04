@@ -45,7 +45,6 @@ body{
     background: deepskyblue;
 }
 .tabla > div ,
-.tabla .tablauno,
 .tabla .tablados {
     margin: 5%;
     background: #fff;
@@ -53,9 +52,7 @@ body{
     border-radius: 4px;
 }
 
-
-
-@media screen and ( max-width: 780px){
+@media screen and ( min-width: 930px) and ( max-width: 1024px) {
     .container{
         grid-template-areas: "ides ides"
                              "usuarios usuarios"
@@ -64,11 +61,88 @@ body{
     }
 
     .tabla  {
-        margin: 5%;
+        margin: 0%;
+        width: 100%;
         
     }
 
 }
+
+@media screen and ( min-width: 730px) and ( max-width: 930px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+}
+
+
+@media screen and ( min-width: 630px) and ( max-width: 730px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+}
+
+@media screen and ( max-width: 430px) and ( max-width: 630px) {
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+}
+
+@media screen and ( max-width: 200px) and ( max-width: 430px){
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+    .tabla .tablados {
+       
+        background: #fff;
+        border-radius: 4px;
+        max-width: 140px;
+    }
+
+}
+
+
+
+
 
 .my-custom-scrollbar {
     
