@@ -101,23 +101,7 @@ body{
 
 }
 
-@media screen and ( max-width: 430px) and ( max-width: 630px) {
-    .container{
-        grid-template-areas: "ides ides"
-                             "usuarios usuarios"
-                             "tabla tabla";
-                             
-    }
-
-    .tabla  {
-        margin: 0%;
-        width: 100%;
-        
-    }
-
-}
-
-@media screen and ( max-width: 200px) and ( max-width: 430px){
+@media screen and ( min-width: 430px) and ( max-width: 630px) {
     .container{
         grid-template-areas: "ides ides"
                              "usuarios usuarios"
@@ -135,7 +119,30 @@ body{
        
         background: #fff;
         border-radius: 4px;
-        max-width: 140px;
+        max-width: 350;
+    }
+
+}
+
+@media screen and ( min-width: 200px) and ( max-width: 430px){
+    .container{
+        grid-template-areas: "ides ides"
+                             "usuarios usuarios"
+                             "tabla tabla";
+                             
+    }
+
+    .tabla  {
+        margin: 0%;
+        width: 100%;
+        
+    }
+
+    .tabla .tablados {
+       
+        background: #fff;
+        border-radius: 4px;
+        min-width: 140px;
     }
 
 }
