@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="images.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="apis.js"></script>
+    <title>Poke Imagenes</title>
+</head>
+<body>
+    <div class="container">
+        <div class="caja-1">
+            <h1>Titulo</h1>
+        </div>
+        <div class="caja-2">
+            <button id="boton-buscar" onclick="buscar()"> Buscar </button>
+            <input id="id-pokemon" type="text"/>
+            <div id="pokemon-img"></div>
+        </div>
+        <div class="caja-3">
+            <h3>Caja 3 </h3>
+        </div>
+    </div>
+</body>
+
+
+<script>
+    let pokemon = ''
+   
+    let imagen = document.getElementById('pokemon-img')
+    const buscar = ()=>{
+        let idPokemon = document.getElementById('id-pokemon').value
+        let res = getPokemonAsync(idPokemon).then(function(resolve){
+            pokemon = resolve.sprites.back_default;
+            console.log(pokemon)
+
+    }).then(function(){
+        imagen.innerHTML = ` <img src="${pokemon}" alt=""/>`;
+    })
+
+
+    }
+
+</script>
+</html>

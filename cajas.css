@@ -1,0 +1,36 @@
+*{
+    margin: 0px;
+    font-family: 'Roboto', sans-serif ;
+}
+.titulo{
+    background-color: #0ecc30;
+    /*margin: 100px;
+    padding: 10px;*/
+    width: 200px;
+    border-radius: 4px;
+    float: left;
+}
+
+.parrafo{
+    background-color: darkolivegreen;
+    padding: 10px;
+    width: 200px;
+    border-radius: 4px;
+    float: left;
+}
+
+footer{
+    background-color: blue;
+    border-radius: 4px;
+    width: 200px;
+    float: right;
+}
+
+.caja-4{
+    width: 200px;
+    background-color: darkcyan;
+    border-radius: 4px;
+   clear: both;
+
+}
+

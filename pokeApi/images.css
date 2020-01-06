@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background:darkturquoise;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(4,auto);
+
+
+    grid-template-areas: "caja-1 caja-1 caja-1"
+                         "caja-2 caja-2 caja-2"
+                         "caja-3 caja-3 caja-3";
+                        
+}
+
+
+.container > div ,
+.container .caja-1,
+.container .caja-2,
+.container .caja-3 {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+
+.container .caja-1{
+    background: #12203E;
+    color: #fff;
+    grid-area: caja-1;
+   
+
+}
+
+
+
+.caja-2{
+    width: 100%;
+    background-color: darkcyan;
+    border-radius: 4px;
+    grid-area: caja-2;
+    padding: 0px !important;
+
+}
+
+img{
+    width: 50%;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px cadetblue;
+    margin-bottom: 5%;
+}
+
+
+.container .caja-3{
+    background: #12203E ;
+    color: #fff;
+ 
+    grid-area: caja-3;
+}
+
+
+#boton-buscar{
+    margin: 2%;
+    width: 10%;
+    background: dodgerblue;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    border: 0px solid #0016b0;
+}
+
+
+#boton-buscar:hover{
+    color: #030e1f;
+    background-color: slateblue;
+  }
+
+#id-pokemon{
+    width: 10%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
