@@ -45,8 +45,7 @@ body{
     background: deepskyblue;
 }
 .tabla > div ,
-.tabla .tablados,
-.tabla .div-textarea {
+.tabla .tablados {
     margin: 5%;
     background: #fff;
   
